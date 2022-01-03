@@ -1,0 +1,250 @@
+.introduction{
+    display:flex;
+    position: absolute;
+    width:100%;
+    top:25vh;
+}
+
+.introduce-myself{
+    width:500px;
+    padding-left:50px;
+    padding-top:10px;
+    height:300px;
+    /*background-color: blue;*/
+}
+
+.introduce-myself h1{
+    font-size:35px;
+    font-family: 'Lora', serif;
+    font-weight:300;
+}
+
+.introduce-myself p{
+    font-size:15px;
+    font-family: 'Lora', serif;
+    font-weight:300;
+}
+
+.loop{
+    width:800px;
+    height:45px;
+}
+
+.loop:before{
+    content:'I am CHIMPANZEE';
+    color:white;
+    font-family: 'Lora', serif;
+    font-size: 35px;
+    font-weight: 500;
+    animation:changing1 infinite 15s;
+
+}
+
+@keyframes changing1{
+    0%{
+        content:'I am CHIMPANZEE';
+        color:red;
+        opacity: 0;
+        transform: rotateX(10deg);
+        animation-duration: 2.5s;
+    }
+    20%{
+        content:'I am CHIMPANZEEE';
+        color:yellow;
+        opacity: 1;
+        transform: rotateX(-10deg);
+        animation-duration: 2.5s;
+    }
+    40%{
+        content:'I am a STUDENT';
+        color:green;
+        opacity: 0;
+        transform: rotateX(10deg);
+        animation-duration: 2.5s;
+        
+    }
+    60%{
+        content:'I am a STUDENT';
+        color:blue;
+        opacity: 1;
+        transform: rotateX(-10deg);
+        animation-duration: 2.5s;
+       
+    }
+    80%{
+        content:'SEEKING INTERNSHIP';
+        color:violet;
+        opacity: 0;
+        transform: rotateX(10deg);
+        animation-duration: 2.5s;
+
+    }
+    100%{
+        content:'SEEKING INTERNSHIP';
+        color:brown;
+        opacity: 1;
+        transform: rotateX(-10deg);
+        animation-duration: 2.5s;
+
+    }
+    
+    
+}
+
+.btn{
+    font-size:1em;
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    background-color: #ff4e00;
+    background-image: linear-gradient(315deg,#ec9f05  0%,  #ff4e0074 100%);
+    display:inline-block;
+    margin-left:60px;
+    margin-top:30px;
+    padding:10px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    letter-spacing: 3px;
+    transition: 0.5s;
+}
+.btn:hover{
+    letter-spacing: 6px;
+    font-size: larger;
+}
+
+.images{
+    content:'';
+    display:block;
+    width:400px;
+    height:300px;
+    /*background-color:green;*/
+
+}
+
+@keyframes jump {
+    0% { transform: translate(0%, 0%) scale(1,0.75); }
+    50% { transform: translate(0%, -150%) scale(0.75, 0.75); }
+    55% { transform: translate(0%, -150%) rotate(15deg); }
+    60% { transform: translate(0%, -150%) rotate(-15deg); }
+    65% { transform: translate(0%, -150%) rotate(15deg); }
+    70% { transform: translate(0%, -150%) rotate(-15deg); }
+    100% { transform: translate(0%, 0%) scale(0.95, 0.95); }
+}
+
+@keyframes money_jump {
+    0% { transform: translate(0%, 0%) scale(1,0.75); }
+    50% { transform: translate(0%, -100%) scale(0.75, 0.75); }
+    55% { transform: translate(0%, -100%) rotate(15deg); }
+    60% { transform: translate(0%, -100%) rotate(-15deg); }
+    65% { transform: translate(0%, -100%) rotate(15deg); }
+    70% { transform: translate(0%, -100%) rotate(-15deg); }
+    100% { transform: translate(0%, 0%) scale(0.95, 0.95); }
+}
+
+.care_rock{
+    position:absolute;
+    right:18px;
+    bottom:5px;
+    transform: translate(0%,0%);
+    animation: jump 5.5s infinite;
+
+}
+
+.care_love{
+    position:absolute;
+    margin-left:10px;
+    bottom:10px;
+    transform: translate(0%,0%);
+    animation: jump 3s infinite;
+}
+
+.care_money{
+    position:absolute;
+    margin-left:150px;
+    top:120px;
+    transform: translate(0%,0%);
+    animation: money_jump 4s infinite;
+}
+@media(max-width:700px){
+    .loop{
+        width:400px;
+        height:50px;
+    }
+    .care_money{
+        display:none;
+    }
+
+}
+
+@media(max-width:586px){
+    .care_love{
+        display:none;
+    }
+
+}
+
+@media(max-width:530px){
+    .introduction{
+        top:20vh;
+    }
+    .introduce-myself{
+        width:400px;
+        padding-left:25px;
+        
+    }
+    .introduce-myself p{
+        padding-left:0px;
+        margin-right:5px;
+        font-size:14px;
+    }
+    .introduce-myself h1{
+        font-size:35px;
+    }
+    .loop{
+        width:300px;
+        height:30px;
+    }
+    .loop:before{
+        font-size: 30px;
+    }
+
+    .images{
+        display:none;
+    }
+
+    
+    
+}
+
+
+@media(max-width:320px){
+    .introduction{
+        top:20vh;
+    }
+    .introduce-myself{
+        width:280px;
+        padding-left:25px;
+        
+    }
+    .introduce-myself p{
+        padding-left:0px;
+        margin-right:5px;
+        font-size:14px;
+    }
+    .introduce-myself h1{
+        font-size:35px;
+    }
+    .loop{
+        width:270px;
+        height:30px;
+    }
+    .loop:before{
+        font-size: 25px;
+    }
+
+    .images{
+        display:none;
+    }
+
+    
+    
+}

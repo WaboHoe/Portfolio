@@ -1,0 +1,92 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+
+}
+header{
+    position:absolute;
+    top:12px;
+    right:10px;
+    width:100%;
+    color:white;
+    display:flex;
+    justify-content: space-between;
+}
+
+header .mainMenu{
+    display:flex;
+    list-style:none;
+
+}
+
+header .mainMenu li a{
+    display:inline-block;
+    font-family: 'Lora', serif;
+    padding:10px;
+    text-decoration:none;
+    text-transform:uppercase;
+    color:white;
+    font-size:20px;
+}
+
+header .mainMenu li a:hover{
+    letter-spacing: 5px;
+    transition: 1.5s;
+}
+
+header .openMenu{
+    font-size:25px;
+    margin:6px;
+    display:none;
+    cursor:pointer;
+}
+
+
+header .mainMenu .closeMenu, .icons i{
+    font-size:2rem;
+    display:none;
+    cursor:pointer;
+}
+
+header .logo{
+    font-family: 'Roboto', sans-serif;
+    margin-top:5px;
+    margin-left:24px;
+    font-size:13px;
+    cursor:pointer;
+}
+
+@media(max-width:600px){
+    header .mainMenu{
+        height:100vh;
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        z-index:10;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        background-image: linear-gradient( rgba(255, 179, 11, 1),rgba(243, 106, 62, 1));
+        transition:top 1s ease;
+        display:none;
+
+    }
+    header .mainMenu .closeMenu{
+        display:block;
+        position:absolute;
+        top:20px;
+        right:20px;
+    }
+
+    header .openMenu{
+        display:block;
+    }
+
+    .icons i{
+        display:inline-block;
+        padding:12px;
+    }
+}
+
